@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900');
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1rem;
+}
+
+body .btn {
+    font-family: "Titillium Web", sans-serif;
+}
+
+header {
+    background-color: #222;
+
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+header h1 {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header .progress {
+    margin: 0;
+}
+
+main {
+    margin-bottom: 55px;
+}
+
+footer {
+    background-color: gainsboro;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer .pull-right {
+    align-items: center;
+    align-content: center;
+    vertical-align: baseline;
+}
+
+footer input[type=checkbox] {
+    display: none;
+}
+
+footer input[type=checkbox] + label {
+    font-size: 1.7rem;
+    font-weight: normal;
+    line-height: 34px;
+    text-transform: uppercase;
+}
+
+footer .scores {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-size: 1.5rem;
+}
+
+footer .scores .label {
+    font-size: inherit;
+}
+
+.flags .thumbnail-image {
+    height: 100%;
+}
+
+.flags .thumbnail-image img {
+    max-height: 100%;
+    width: auto;
+}
+
+.flags .thumbnail-image {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.flags .thumbnail-image .thumbnail-title {
+    text-align: center;
+}
+
+.flags .thumbnail-image img {
+    border: 1px solid #666;
+    box-shadow: 0 0 5px #222;
+    max-width: 100%;
+}
+
+.draggables, .droppables {
+    text-align: center;
+}
+
+.draggables .thumbnail {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.droppables .thumbnail {
+    background-color: #fff;
+}
+
+.droppables .thumbnail h3 {
+    max-width: 100%;
+}
+
+.draggables .thumbnail-image img {
+    z-index: 1000;
+}
+.droppables .thumbnail {
+    position: relative;
+    z-index: 500;
+}
+.droppables .thumbnail-image {
+    z-index: 501;
+}
+.droppables .thumbnail-image img {
+    z-index: 502;
+}
+.droppables .thumbnail-title {
+    display: flex;
+    z-index: 503;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+}
+.droppables .danger .thumbnail-title,
+.droppables .success .thumbnail-title {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+}
+.droppables .danger .thumbnail-title {
+    background-color: rgba(220,20,60,0.3);
+    border-color: crimson;
+}
+.droppables .success .thumbnail-title {
+    background-color: rgba(31,125,31,0.3);
+    border-color: forestgreen;
+}
+.droppables .thumbnail-title h3 {
+    z-index: 1001;
+    text-transform: uppercase;
+}
+.droppables .danger .thumbnail-title h3,
+.droppables .success .thumbnail-title h3 {
+    padding: 3px;
+    font-weight: 600;
+    color: #fff;
+}
+.droppables .danger .thumbnail-title h3 {
+    background-color: crimson;
+}
+.droppables .success .thumbnail-title h3 {
+    background-color: forestgreen;
+}
+.droppables .thumbnail-image img {
+    box-shadow: none;
+}
+.droppables .danger .thumbnail-image img,
+.droppables .success .thumbnail-image img {
+    opacity: 0.4;
+}
+
+.modal .modal-body p {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.tooltip {
+    font-size: 1.7rem;
+}
+.timer {
+    display: none;
+    transition: none;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 6px;
+
+    }
+    header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 4px;
+
+    }
+    main {
+        margin-top: 65px;
+    }
+    footer {
+        padding: 6px;
+    }
+
+    .flags > .draggables,
+    .flags > .droppables {
+        float: left;
+    }
+    .flags:after,
+    .flags:before {
+        content: "";
+        display: table;
+    }
+    .flags:after {
+        clear: both;
+    }
+    .draggables, .droppables {
+        width: 50%;
+    }
+    .flags-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flags .thumbnail {
+        margin-bottom: 6px;
+        height: 15vh;
+    }
+    .droppables .thumbnail-title h3 {
+        font-size: 4vmin;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    header {
+        padding: 10px;
+
+    }
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 6px;
+    }
+    main {
+        margin-top: 85px;
+    }
+    footer {
+        padding: 10px;
+    }
+
+    .flags-container {
+        display: inline-block;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flags-container:before,
+    .flags-container:after {
+        content: "";
+        display: table;
+    }
+    .flags-container:after {
+        clear: both;
+    }
+
+    .flags .thumbnail {
+        margin-bottom: 1%;
+        height: 25vh;
+        width: 19.2%;
+        float: left;
+    }
+    .flags .thumbnail:not(:first-of-type) {
+        margin-left: 1%;
+    }
+    .droppables .thumbnail-title h3 {
+        font-size: 1.7rem;
+        white-space: pre-wrap;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .flags {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    .flags {
+        width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

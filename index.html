@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta name="author" content="Hayk AVETISYAN"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css"/>
+    <title>Countries</title>
+</head>
+<body>
+<div class="countries">
+    <header>
+        <h1>Find Flags</h1>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success timer" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                 aria-valuemax="30000" style="width: 60%;" data-timer-age="30000">
+                <span class="sr-only">60% Complete</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flags">
+
+
+        <div class="draggables">
+            <div class="flags-container"></div>
+        </div>
+
+        <div class="droppables">
+            <div class="flags-container"></div>
+        </div>
+
+        <div id="total-scores-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Total Scores</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button id="modal-ok-button" type="button" class="btn btn-primary" data-dismiss="modal">
+                            <i class="fa fa-fw fa-check"></i> OK</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </main>
+
+    <footer>
+        <button type="button" id="reset-button" class="btn btn-primary">Reset</button>
+        <div class="scores">
+            <span id="score-success" class="label label-success">0</span> /
+            <span id="total-score" class="label label-default">5</span>
+        </div>
+        <div class="pull-right">
+            <input type="checkbox" class="checkbox" id="with-timer">
+            <label for="with-timer">With Timer</label>
+        </div>
+    </footer>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+</html>
